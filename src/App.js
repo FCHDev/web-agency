@@ -6,19 +6,22 @@ import Project3 from "./pages/Project3";
 import Project4 from "./pages/Project4";
 import Contact from "./pages/Contact";
 import NoteFound from "./pages/NoteFound";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projet-1" element={<Project1 />} />
-        <Route path="/projet-2" element={<Project2 />} />
-        <Route path="/projet-3" element={<Project3 />} />
-        <Route path="/projet-4" element={<Project4 />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NoteFound />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projet-1" element={<Project1 />} />
+          <Route path="/projet-2" element={<Project2 />} />
+          <Route path="/projet-3" element={<Project3 />} />
+          <Route path="/projet-4" element={<Project4 />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NoteFound />} />
+        </Routes>
+      </AnimatePresence>
     </BrowserRouter>
   );
 }
